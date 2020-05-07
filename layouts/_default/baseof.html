@@ -65,5 +65,11 @@
         </div>
     </div>
     {{ partial "hook_body_end.html" . }}
+    <script>        
+        document.querySelectorAll(".toc-link").forEach((element)=>{
+            const href = decodeURI(element.getAttribute('href'))
+            element.setAttribute('href', href)
+        })
+    </script>
 </body>
 </html>

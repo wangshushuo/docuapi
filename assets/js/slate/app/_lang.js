@@ -25,7 +25,6 @@ under the License.
   global.activateLanguage = activateLanguage;
 
   function activateLanguage(language) {
-
     if (!language) return;
     if (language === "") return;
     $(".lang-selector a").removeClass('active');
@@ -40,8 +39,9 @@ under the License.
     $(".lang-specific." + language).parentsUntil(".highlight").show();
 
     // scroll to the new location of the position
-    if ($(window.location.hash).get(0)) {
-      $(window.location.hash).get(0).scrollIntoView(true);
+    var hash = decodeURI(window.location.hash);
+    if ($(hash).get(0)) {
+      $(hash).get(0).scrollIntoView(true);
     }
   }
 
