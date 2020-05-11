@@ -2,6 +2,8 @@
 
 ## install 
 
+安装主题和主题的依赖
+
 ```
 git submodule add https://github.com/wangshushuo/docuapi.git themes/docuapi
 
